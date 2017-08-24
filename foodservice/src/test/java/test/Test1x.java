@@ -6,14 +6,13 @@ import org.junit.runners.MethodSorters;
 
 import br.com.fservice.to.Ingrediente;
 import br.com.fservice.to.Lanche;
+import static org.junit.Assert.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Test1x {
 
 	@Test
 	public void testDecorator() {
-		
-		
 		
 		
 		Lanche lanche = new Lanche();
@@ -25,16 +24,21 @@ public class Test1x {
 		Ingrediente hamburguer = new Ingrediente(1,"Hambúrguer de carne",3D);
 		Ingrediente queijo = new Ingrediente(1,"Queijo",1.50);
 		
+		
+		double expected = bacon1.getPreco() + alface1.getPreco() + hamburguer.getPreco() + queijo.getPreco();
+		
+		
+		
 		//X-Bacon
 		lanche.addIngrediente(bacon1);
 		lanche.addIngrediente(hamburguer);
 		lanche.addIngrediente(queijo);
+		lanche.addIngrediente(alface1);
 		
+		double val = lanche.getValorTotal();
 		
-		double var = lanche.getValorTotal();
-		
-		int x = 1;
-		
+		assertEquals(Double.valueOf(expected) , Double.valueOf(val));
+	
 		
 	}
 

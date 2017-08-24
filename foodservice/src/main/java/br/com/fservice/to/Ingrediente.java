@@ -25,6 +25,9 @@ public class Ingrediente extends BaseEntity {
 	
 	public int getQuantidadeItens(Long ingredienteID){
 		
+		
+		
+		
 		int total = 0;
 		
 		
@@ -32,31 +35,21 @@ public class Ingrediente extends BaseEntity {
 			total = 1;
 		}
 		
+		if(ingrediente!=null){
+			total += ingrediente.getValorTotalItens();	
+		}		
 		
-		return ingrediente.getQuantidadeItens(ingredienteID);
+		
+		return total;
 	}
 	
 	public double getValorTotalItens(){
 		
-		System.out.println(descricao + ":"+ preco);
 		double vlr = preco;
-		
-		
-		
-		
-		
 		if(ingrediente!=null){
 			vlr += ingrediente.getValorTotalItens();	
 		}
-
-		
-		
 		return vlr ;	
-
-		
-		
-		
-			
 	}	
 	
 

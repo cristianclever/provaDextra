@@ -20,27 +20,22 @@ public class SessionListener implements HttpSessionListener, HttpSessionAttribut
 	}
 
 	public void attributeAdded(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void attributeRemoved(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void attributeReplaced(HttpSessionBindingEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void sessionCreated(HttpSessionEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void sessionDestroyed(HttpSessionEvent arg0) {
-		// TODO Auto-generated method stub
 		
 	}	
 	

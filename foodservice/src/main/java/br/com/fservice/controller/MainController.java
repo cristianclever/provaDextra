@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class MainController {
+public class MainController extends AbstractController{
 	
 	
 	@RequestMapping(method=RequestMethod.GET)
@@ -16,6 +16,12 @@ public class MainController {
 		ModelAndView mv = new ModelAndView("index");
 		mv.getModelMap().addAttribute ("name", "Cristian Clever de Oliveira");
 		return mv;
+	}
+
+	
+	@Override
+	public Class<?> getControllerClass() {
+		return MainController.class;
 	}
 	
 	
